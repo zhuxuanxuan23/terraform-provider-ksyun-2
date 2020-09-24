@@ -39,7 +39,7 @@ func resourceKsyunVolume() *schema.Resource {
 				Optional: true,
 			},
 			"size": {
-				Type:     schema.TypeInt,
+				Type:     schema.TypeString,
 				Required: true,
 			},
 			"charge_type": {
@@ -51,7 +51,7 @@ func resourceKsyunVolume() *schema.Resource {
 				Required: true,
 			},
 			"project_id": {
-				Type:     schema.TypeInt,
+				Type:     schema.TypeString,
 				Optional: true,
 			},
 			"volume_status": {

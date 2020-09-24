@@ -20,7 +20,7 @@ func dataSourceRedisInstances() *schema.Resource {
 				Optional: true,
 			},
 			"total_count": {
-				Type:     schema.TypeInt,
+				Type:     schema.TypeString,
 				Computed: true,
 			},
 			"cache_id": {
@@ -81,15 +81,15 @@ func dataSourceRedisInstances() *schema.Resource {
 							Computed: true,
 						},
 						"mode": {
-							Type:     schema.TypeInt,
+							Type:     schema.TypeString,
 							Computed: true,
 						},
 						"size": {
-							Type:     schema.TypeInt,
+							Type:     schema.TypeString,
 							Computed: true,
 						},
 						"port": {
-							Type:     schema.TypeInt,
+							Type:     schema.TypeString,
 							Computed: true,
 						},
 						"vip": {
@@ -97,7 +97,7 @@ func dataSourceRedisInstances() *schema.Resource {
 							Computed: true,
 						},
 						"status": {
-							Type:     schema.TypeInt,
+							Type:     schema.TypeString,
 							Computed: true,
 						},
 						"create_time": {
@@ -105,7 +105,7 @@ func dataSourceRedisInstances() *schema.Resource {
 							Computed: true,
 						},
 						"net_type": {
-							Type:     schema.TypeInt,
+							Type:     schema.TypeString,
 							Computed: true,
 						},
 						"vpc_id": {
@@ -117,19 +117,19 @@ func dataSourceRedisInstances() *schema.Resource {
 							Computed: true,
 						},
 						"bill_type": {
-							Type:     schema.TypeInt,
+							Type:     schema.TypeString,
 							Computed: true,
 						},
 						"order_type": {
-							Type:     schema.TypeInt,
+							Type:     schema.TypeString,
 							Computed: true,
 						},
 						"source": {
-							Type:     schema.TypeInt,
+							Type:     schema.TypeString,
 							Computed: true,
 						},
 						"service_status": {
-							Type:     schema.TypeInt,
+							Type:     schema.TypeString,
 							Computed: true,
 						},
 						"service_begin_time": {

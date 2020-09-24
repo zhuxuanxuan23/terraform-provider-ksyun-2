@@ -25,11 +25,11 @@ func dataSourceKsyunKrdsSecurityGroup() *schema.Resource {
 				Required: true,
 			},
 			"total_count": {
-				Type:     schema.TypeInt,
+				Type:     schema.TypeString,
 				Computed: true,
 			},
 			"security_group_id": {
-				Type:     schema.TypeInt,
+				Type:     schema.TypeString,
 				Required: false,
 				Optional: true,
 			},

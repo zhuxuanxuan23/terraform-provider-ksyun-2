@@ -33,7 +33,7 @@ func resourceKsyunBackendServerGroup() *schema.Resource {
 				Required: true,
 			},
 			"backend_server_number": {
-				Type:     schema.TypeInt,
+				Type:     schema.TypeString,
 				Computed: true,
 			},
 			"backend_server_group_type": {

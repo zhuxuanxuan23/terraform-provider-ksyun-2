@@ -36,7 +36,7 @@ func resourceRedisInstance() *schema.Resource {
 				Required: true,
 			},
 			"mode": {
-				Type:     schema.TypeInt,
+				Type:     schema.TypeString,
 				Optional: true,
 				Computed: true,
 				ValidateFunc: func(i interface{}, k string) (s []string, es []error) {
@@ -55,18 +55,18 @@ func resourceRedisInstance() *schema.Resource {
 				},
 			},
 			"capacity": {
-				Type:     schema.TypeInt,
+				Type:     schema.TypeString,
 				Required: true,
 			},
 			"slave_num": {
-				Type:     schema.TypeInt,
+				Type:     schema.TypeString,
 				Required: true,
 				//Optional: true,
 				//Computed: true,
 				//ValidateFunc: validation.IntBetween(0,8),
 			},
 			"net_type": {
-				Type:     schema.TypeInt,
+				Type:     schema.TypeString,
 				Required: true,
 				ValidateFunc: func(i interface{}, k string) (s []string, es []error) {
 					v, ok := i.(int)
@@ -92,7 +92,7 @@ func resourceRedisInstance() *schema.Resource {
 				Required: true,
 			},
 			"bill_type": {
-				Type:     schema.TypeInt,
+				Type:     schema.TypeString,
 				Optional: true,
 				Computed: true,
 			},
@@ -138,11 +138,11 @@ func resourceRedisInstance() *schema.Resource {
 				Computed: true,
 			},
 			"size": {
-				Type:     schema.TypeInt,
+				Type:     schema.TypeString,
 				Computed: true,
 			},
 			"port": {
-				Type:     schema.TypeInt,
+				Type:     schema.TypeString,
 				Computed: true,
 			},
 			"vip": {
@@ -154,7 +154,7 @@ func resourceRedisInstance() *schema.Resource {
 				Computed: true,
 			},
 			"status": {
-				Type:     schema.TypeInt,
+				Type:     schema.TypeString,
 				Computed: true,
 			},
 			"create_time": {
@@ -182,19 +182,19 @@ func resourceRedisInstance() *schema.Resource {
 				Computed: true,
 			},
 			"order_type": {
-				Type:     schema.TypeInt,
+				Type:     schema.TypeString,
 				Computed: true,
 			},
 			"order_use": {
-				Type:     schema.TypeInt,
+				Type:     schema.TypeString,
 				Computed: true,
 			},
 			"source": {
-				Type:     schema.TypeInt,
+				Type:     schema.TypeString,
 				Computed: true,
 			},
 			"service_status": {
-				Type:     schema.TypeInt,
+				Type:     schema.TypeString,
 				Computed: true,
 			},
 			"service_begin_time": {

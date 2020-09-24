@@ -24,7 +24,7 @@ func dataSourceKsyunLbListenerServers() *schema.Resource {
 			},
 
 			"total_count": {
-				Type:     schema.TypeInt,
+				Type:     schema.TypeString,
 				Computed: true,
 			},
 			"listener_id": {
@@ -51,7 +51,7 @@ func dataSourceKsyunLbListenerServers() *schema.Resource {
 							Computed: true,
 						},
 						"real_server_port": {
-							Type:     schema.TypeInt,
+							Type:     schema.TypeString,
 							Computed: true,
 						},
 						"real_server_type": {
@@ -59,7 +59,7 @@ func dataSourceKsyunLbListenerServers() *schema.Resource {
 							Computed: true,
 						},
 						"weight": {
-							Type:     schema.TypeInt,
+							Type:     schema.TypeString,
 							Computed: true,
 						},
 						"real_server_state": {

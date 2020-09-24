@@ -56,7 +56,7 @@ func resourceKsyunEipAssociation() *schema.Resource {
 				Computed: true,
 			},
 			"band_width": {
-				Type:     schema.TypeInt,
+				Type:     schema.TypeString,
 				Computed: true,
 			},
 

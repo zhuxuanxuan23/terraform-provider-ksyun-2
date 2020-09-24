@@ -51,7 +51,7 @@ func resourceKsyunInstance() *schema.Resource {
 							Computed: true,
 						},
 						"disk_size": {
-							Type:     schema.TypeInt,
+							Type:     schema.TypeString,
 							Optional: true,
 							Computed: true,
 						},
@@ -59,7 +59,7 @@ func resourceKsyunInstance() *schema.Resource {
 				},
 			},
 			"data_disk_gb": {
-				Type:     schema.TypeInt,
+				Type:     schema.TypeString,
 				Optional: true,
 			},
 			"data_disk": {
@@ -72,7 +72,7 @@ func resourceKsyunInstance() *schema.Resource {
 							Optional: true,
 						},
 						"size": {
-							Type:     schema.TypeInt,
+							Type:     schema.TypeString,
 							Optional: true,
 						},
 						"delete_with_instance": {
@@ -84,11 +84,11 @@ func resourceKsyunInstance() *schema.Resource {
 			},
 			/*
 			   "max_count": {
-			      Type:     schema.TypeInt,
+			      Type:     schema.TypeString,
 			      Required: true,
 			   },
 			   "min_count": {
-			      Type:     schema.TypeInt,
+			      Type:     schema.TypeString,
 			      Required: true,
 			   },
 			*/
@@ -107,7 +107,7 @@ func resourceKsyunInstance() *schema.Resource {
 				Required: true,
 			},
 			"purchase_time": {
-				Type:     schema.TypeInt,
+				Type:     schema.TypeString,
 				Optional: true,
 			},
 			"security_group_id": {
@@ -132,7 +132,7 @@ func resourceKsyunInstance() *schema.Resource {
 				Computed: true,
 			},
 			"project_id": {
-				Type:     schema.TypeInt,
+				Type:     schema.TypeString,
 				Optional: true,
 				Computed: true,
 			},
@@ -176,24 +176,24 @@ func resourceKsyunInstance() *schema.Resource {
 				Elem: &schema.Resource{
 					Schema: map[string]*schema.Schema{
 						"v_c_p_u": {
-							Type:     schema.TypeInt,
+							Type:     schema.TypeString,
 							Computed: true,
 						},
 						"g_p_u": {
-							Type:     schema.TypeInt,
+							Type:     schema.TypeString,
 							Computed: true,
 						},
 						"memory_gb": {
-							Type:     schema.TypeInt,
+							Type:     schema.TypeString,
 							Computed: true,
 						},
 						"data_disk_gb": {
-							Type:     schema.TypeInt,
+							Type:     schema.TypeString,
 							Computed: true,
 						},
 						/*
 						   "root_disk_gb": {
-						      Type:     schema.TypeInt,
+						      Type:     schema.TypeString,
 						      Computed: true,
 						   },
 						   "data_disk_type": {
@@ -300,11 +300,11 @@ func resourceKsyunInstance() *schema.Resource {
 				Computed: true,
 			},
 			"product_type": {
-				Type:     schema.TypeInt,
+				Type:     schema.TypeString,
 				Computed: true,
 			},
 			"product_what": {
-				Type:     schema.TypeInt,
+				Type:     schema.TypeString,
 				Computed: true,
 			},
 			"auto_scaling_type": {

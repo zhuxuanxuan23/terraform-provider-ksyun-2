@@ -30,7 +30,7 @@ func dataSourceKsyunSSHKeys() *schema.Resource {
 			},
 
 			"total_count": {
-				Type:     schema.TypeInt,
+				Type:     schema.TypeString,
 				Computed: true,
 			},
 			"key_name": {

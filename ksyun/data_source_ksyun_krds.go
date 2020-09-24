@@ -25,7 +25,7 @@ func dataSourceKsyunKrds() *schema.Resource {
 				Optional: true,
 			},
 			"total_count": {
-				Type:     schema.TypeInt,
+				Type:     schema.TypeString,
 				Computed: true,
 			},
 			"db_instance_identifier": {
@@ -63,12 +63,12 @@ func dataSourceKsyunKrds() *schema.Resource {
 				Optional: true,
 			},
 			"marker": {
-				Type:     schema.TypeInt,
+				Type:     schema.TypeString,
 				Required: false,
 				Optional: true,
 			},
 			"max_records": {
-				Type:     schema.TypeInt,
+				Type:     schema.TypeString,
 				Required: false,
 				Optional: true,
 			},
@@ -92,32 +92,32 @@ func dataSourceKsyunKrds() *schema.Resource {
 										Computed: true,
 									},
 									"vcpus": {
-										Type:     schema.TypeInt,
+										Type:     schema.TypeString,
 										Optional: true,
 										Computed: true,
 									},
 									"disk": {
-										Type:     schema.TypeInt,
+										Type:     schema.TypeString,
 										Optional: true,
 										Computed: true,
 									},
 									"ram": {
-										Type:     schema.TypeInt,
+										Type:     schema.TypeString,
 										Optional: true,
 										Computed: true,
 									},
 									"iops": {
-										Type:     schema.TypeInt,
+										Type:     schema.TypeString,
 										Optional: true,
 										Computed: true,
 									},
 									"max_conn": {
-										Type:     schema.TypeInt,
+										Type:     schema.TypeString,
 										Optional: true,
 										Computed: true,
 									},
 									"mem": {
-										Type:     schema.TypeInt,
+										Type:     schema.TypeString,
 										Optional: true,
 										Computed: true,
 									},
@@ -254,7 +254,7 @@ func dataSourceKsyunKrds() *schema.Resource {
 							Computed: true,
 						},
 						"project_id": {
-							Type:     schema.TypeInt,
+							Type:     schema.TypeString,
 							Optional: true,
 							Computed: true,
 						},
@@ -269,12 +269,12 @@ func dataSourceKsyunKrds() *schema.Resource {
 							Computed: true,
 						},
 						"bill_type_id": {
-							Type:     schema.TypeInt,
+							Type:     schema.TypeString,
 							Optional: true,
 							Computed: true,
 						},
 						"port": {
-							Type:     schema.TypeInt,
+							Type:     schema.TypeString,
 							Optional: true,
 							Computed: true,
 						},
@@ -299,7 +299,7 @@ func dataSourceKsyunKrds() *schema.Resource {
 							Computed: true,
 						},
 						"product_what": {
-							Type:     schema.TypeInt,
+							Type:     schema.TypeString,
 							Optional: true,
 							Computed: true,
 						},
@@ -374,7 +374,7 @@ func dataSourceKsyunKrds() *schema.Resource {
 							Computed: true,
 						},
 						"eip_port": {
-							Type:     schema.TypeInt,
+							Type:     schema.TypeString,
 							Optional: true,
 							Computed: true,
 						},

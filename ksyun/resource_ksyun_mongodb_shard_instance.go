@@ -39,11 +39,11 @@ func resourceKsyunMongodbShardInstance() *schema.Resource {
 				Required: true,
 			},
 			"mongos_num": {
-				Type:     schema.TypeInt,
+				Type:     schema.TypeString,
 				Required: true,
 			},
 			"shard_num": {
-				Type:     schema.TypeInt,
+				Type:     schema.TypeString,
 				Required: true,
 			},
 			"mongos_class": {
@@ -55,7 +55,7 @@ func resourceKsyunMongodbShardInstance() *schema.Resource {
 				Required: true,
 			},
 			"storage": {
-				Type:     schema.TypeInt,
+				Type:     schema.TypeString,
 				Required: true,
 			},
 			"vpc_id": {
@@ -125,7 +125,7 @@ func resourceKsyunMongodbShardInstance() *schema.Resource {
 				Computed: true,
 			},
 			"port": {
-				Type:     schema.TypeInt,
+				Type:     schema.TypeString,
 				Computed: true,
 			},
 			"network_type": {
@@ -149,7 +149,7 @@ func resourceKsyunMongodbShardInstance() *schema.Resource {
 				Computed: true,
 			},
 			"product_what": {
-				Type:     schema.TypeInt,
+				Type:     schema.TypeString,
 				Computed: true,
 			},
 			"create_date": {
@@ -169,11 +169,11 @@ func resourceKsyunMongodbShardInstance() *schema.Resource {
 				Computed: true,
 			},
 			"node_num": {
-				Type:     schema.TypeInt,
+				Type:     schema.TypeString,
 				Computed: true,
 			},
 			"total_storage": {
-				Type:     schema.TypeInt,
+				Type:     schema.TypeString,
 				Computed: true,
 			},
 			"config": {
@@ -210,7 +210,7 @@ func resourceKsyunMongodbShardInstance() *schema.Resource {
 							Computed: true,
 						},
 						"connections": {
-							Type:     schema.TypeInt,
+							Type:     schema.TypeString,
 							Computed: true,
 						},
 						"instance_class": {
@@ -238,11 +238,11 @@ func resourceKsyunMongodbShardInstance() *schema.Resource {
 							Computed: true,
 						},
 						"disk": {
-							Type:     schema.TypeInt,
+							Type:     schema.TypeString,
 							Computed: true,
 						},
 						"iops": {
-							Type:     schema.TypeInt,
+							Type:     schema.TypeString,
 							Computed: true,
 						},
 						"instance_class": {

@@ -24,7 +24,7 @@ func dataSourceKsyunSlbAcls() *schema.Resource {
 			},
 
 			"total_count": {
-				Type:     schema.TypeInt,
+				Type:     schema.TypeString,
 				Computed: true,
 			},
 			"lb_acls": {
@@ -62,7 +62,7 @@ func dataSourceKsyunSlbAcls() *schema.Resource {
 										Computed: true,
 									},
 									"rule_number": {
-										Type:     schema.TypeInt,
+										Type:     schema.TypeString,
 										Computed: true,
 									},
 									"rule_action": {

@@ -24,7 +24,7 @@ func dataSourceKsyunHealthChecks() *schema.Resource {
 			},
 
 			"total_count": {
-				Type:     schema.TypeInt,
+				Type:     schema.TypeString,
 				Computed: true,
 			},
 			"listener_id": {
@@ -40,11 +40,11 @@ func dataSourceKsyunHealthChecks() *schema.Resource {
 				Elem: &schema.Resource{
 					Schema: map[string]*schema.Schema{
 						"interval": {
-							Type:     schema.TypeInt,
+							Type:     schema.TypeString,
 							Computed: true,
 						},
 						"unhealthy_threshold": {
-							Type:     schema.TypeInt,
+							Type:     schema.TypeString,
 							Computed: true,
 						},
 						"health_check_state": {
@@ -56,11 +56,11 @@ func dataSourceKsyunHealthChecks() *schema.Resource {
 							Computed: true,
 						},
 						"healthy_threshold": {
-							Type:     schema.TypeInt,
+							Type:     schema.TypeString,
 							Computed: true,
 						},
 						"timeout": {
-							Type:     schema.TypeInt,
+							Type:     schema.TypeString,
 							Computed: true,
 						},
 						"listener_id": {

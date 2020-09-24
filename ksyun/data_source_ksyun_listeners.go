@@ -24,7 +24,7 @@ func dataSourceKsyunListeners() *schema.Resource {
 			},
 
 			"total_count": {
-				Type:     schema.TypeInt,
+				Type:     schema.TypeString,
 				Computed: true,
 			},
 			"load_balancer_id": {
@@ -64,7 +64,7 @@ func dataSourceKsyunListeners() *schema.Resource {
 							Computed: true,
 						},
 						"listener_port": {
-							Type:     schema.TypeInt,
+							Type:     schema.TypeString,
 							Computed: true,
 						},
 						"method": {
@@ -99,19 +99,19 @@ func dataSourceKsyunListeners() *schema.Resource {
 										Computed: true,
 									},
 									"healthy_threshold": {
-										Type:     schema.TypeInt,
+										Type:     schema.TypeString,
 										Computed: true,
 									},
 									"interval": {
-										Type:     schema.TypeInt,
+										Type:     schema.TypeString,
 										Computed: true,
 									},
 									"timeout": {
-										Type:     schema.TypeInt,
+										Type:     schema.TypeString,
 										Computed: true,
 									},
 									"unhealthy_threshold": {
-										Type:     schema.TypeInt,
+										Type:     schema.TypeString,
 										Computed: true,
 									},
 									"url_path": {
@@ -133,7 +133,7 @@ func dataSourceKsyunListeners() *schema.Resource {
 							Elem: &schema.Resource{
 								Schema: map[string]*schema.Schema{
 									"session_persistence_period": {
-										Type:     schema.TypeInt,
+										Type:     schema.TypeString,
 										Computed: true,
 									},
 									"session_state": {
@@ -161,7 +161,7 @@ func dataSourceKsyunListeners() *schema.Resource {
 										Computed: true,
 									},
 									"real_server_port": {
-										Type:     schema.TypeInt,
+										Type:     schema.TypeString,
 										Computed: true,
 									},
 									"real_server_state": {
@@ -185,7 +185,7 @@ func dataSourceKsyunListeners() *schema.Resource {
 										Computed: true,
 									},
 									"weight": {
-										Type:     schema.TypeInt,
+										Type:     schema.TypeString,
 										Computed: true,
 									},
 								},

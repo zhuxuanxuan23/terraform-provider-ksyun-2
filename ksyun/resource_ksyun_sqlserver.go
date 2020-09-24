@@ -92,7 +92,7 @@ func resourceKsyunSqlServer() *schema.Resource {
 				Required: true,
 			},
 			"duration": {
-				Type:     schema.TypeInt,
+				Type:     schema.TypeString,
 				Required: false,
 				Optional: true,
 			},
@@ -118,12 +118,12 @@ func resourceKsyunSqlServer() *schema.Resource {
 				Optional: true,
 			},
 			"project_id": {
-				Type:     schema.TypeInt,
+				Type:     schema.TypeString,
 				Required: false,
 				Optional: true,
 			},
 			"port": {
-				Type:     schema.TypeInt,
+				Type:     schema.TypeString,
 				Required: false,
 				Optional: true,
 				Computed: true,

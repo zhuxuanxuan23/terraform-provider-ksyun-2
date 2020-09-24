@@ -22,7 +22,7 @@ func dataSourceKsyunBackendServerGroups() *schema.Resource {
 				Optional: true,
 			},
 			"total_count": {
-				Type:     schema.TypeInt,
+				Type:     schema.TypeString,
 				Computed: true,
 			},
 			"backend_server_groups": {
@@ -43,7 +43,7 @@ func dataSourceKsyunBackendServerGroups() *schema.Resource {
 							Computed: true,
 						},
 						"backend_server_number": {
-							Type:     schema.TypeInt,
+							Type:     schema.TypeString,
 							Computed: true,
 						},
 						"backend_server_group_type": {
@@ -72,19 +72,19 @@ func dataSourceKsyunBackendServerGroups() *schema.Resource {
 										Computed: true,
 									},
 									"healthy_threshold": {
-										Type:     schema.TypeInt,
+										Type:     schema.TypeString,
 										Computed: true,
 									},
 									"interval": {
-										Type:     schema.TypeInt,
+										Type:     schema.TypeString,
 										Computed: true,
 									},
 									"timeout": {
-										Type:     schema.TypeInt,
+										Type:     schema.TypeString,
 										Computed: true,
 									},
 									"unhealthy_threshold": {
-										Type:     schema.TypeInt,
+										Type:     schema.TypeString,
 										Computed: true,
 									},
 									"url_path": {

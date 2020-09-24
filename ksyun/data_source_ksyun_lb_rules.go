@@ -30,7 +30,7 @@ func dataSourceKsyunSlbRules() *schema.Resource {
 				Optional: true,
 			},
 			"total_count": {
-				Type:     schema.TypeInt,
+				Type:     schema.TypeString,
 				Computed: true,
 			},
 			"lb_rules": {
@@ -85,19 +85,19 @@ func dataSourceKsyunSlbRules() *schema.Resource {
 										Computed: true,
 									},
 									"healthy_threshold": {
-										Type:     schema.TypeInt,
+										Type:     schema.TypeString,
 										Computed: true,
 									},
 									"interval": {
-										Type:     schema.TypeInt,
+										Type:     schema.TypeString,
 										Computed: true,
 									},
 									"timeout": {
-										Type:     schema.TypeInt,
+										Type:     schema.TypeString,
 										Computed: true,
 									},
 									"unhealthy_threshold": {
-										Type:     schema.TypeInt,
+										Type:     schema.TypeString,
 										Computed: true,
 									},
 									"url_path": {
@@ -119,7 +119,7 @@ func dataSourceKsyunSlbRules() *schema.Resource {
 							Elem: &schema.Resource{
 								Schema: map[string]*schema.Schema{
 									"session_persistence_period": {
-										Type:     schema.TypeInt,
+										Type:     schema.TypeString,
 										Computed: true,
 									},
 									"session_state": {

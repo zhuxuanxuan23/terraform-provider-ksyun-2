@@ -44,7 +44,7 @@ func resourceKsyunListener() *schema.Resource {
 				Optional: true,
 			},
 			"listener_port": {
-				Type:     schema.TypeInt,
+				Type:     schema.TypeString,
 				Required: true,
 			},
 			"method": {
@@ -81,19 +81,19 @@ func resourceKsyunListener() *schema.Resource {
 							Computed: true,
 						},
 						"healthy_threshold": {
-							Type:     schema.TypeInt,
+							Type:     schema.TypeString,
 							Computed: true,
 						},
 						"interval": {
-							Type:     schema.TypeInt,
+							Type:     schema.TypeString,
 							Computed: true,
 						},
 						"timeout": {
-							Type:     schema.TypeInt,
+							Type:     schema.TypeString,
 							Computed: true,
 						},
 						"unhealthy_threshold": {
-							Type:     schema.TypeInt,
+							Type:     schema.TypeString,
 							Computed: true,
 						},
 						"url_path": {
@@ -116,7 +116,7 @@ func resourceKsyunListener() *schema.Resource {
 				Elem: &schema.Resource{
 					Schema: map[string]*schema.Schema{
 						"session_persistence_period": {
-							Type:     schema.TypeInt,
+							Type:     schema.TypeString,
 							Computed: true,
 							Optional: true,
 						},
@@ -148,7 +148,7 @@ func resourceKsyunListener() *schema.Resource {
 							Computed: true,
 						},
 						"real_server_port": {
-							Type:     schema.TypeInt,
+							Type:     schema.TypeString,
 							Computed: true,
 						},
 						"real_server_state": {
@@ -172,7 +172,7 @@ func resourceKsyunListener() *schema.Resource {
 							Computed: true,
 						},
 						"weight": {
-							Type:     schema.TypeInt,
+							Type:     schema.TypeString,
 							Computed: true,
 						},
 					},

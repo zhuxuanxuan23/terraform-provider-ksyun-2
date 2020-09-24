@@ -42,7 +42,7 @@ func dataSourceKsyunImages() *schema.Resource {
 			},
 
 			"total_count": {
-				Type:     schema.TypeInt,
+				Type:     schema.TypeString,
 				Computed: true,
 			},
 
@@ -84,7 +84,7 @@ func dataSourceKsyunImages() *schema.Resource {
 							Computed: true,
 						},
 						"sys_disk": {
-							Type:     schema.TypeInt,
+							Type:     schema.TypeString,
 							Computed: true,
 						},
 						"instance_id": {

@@ -24,7 +24,7 @@ func dataSourceKsyunSecurityGroups() *schema.Resource {
 			},
 
 			"total_count": {
-				Type:     schema.TypeInt,
+				Type:     schema.TypeString,
 				Computed: true,
 			},
 			"vpc_id": {
@@ -85,19 +85,19 @@ func dataSourceKsyunSecurityGroups() *schema.Resource {
 										Computed: true,
 									},
 									"icmp_type": {
-										Type:     schema.TypeInt,
+										Type:     schema.TypeString,
 										Computed: true,
 									},
 									"icmp_code": {
-										Type:     schema.TypeInt,
+										Type:     schema.TypeString,
 										Computed: true,
 									},
 									"port_range_from": {
-										Type:     schema.TypeInt,
+										Type:     schema.TypeString,
 										Computed: true,
 									},
 									"port_range_to": {
-										Type:     schema.TypeInt,
+										Type:     schema.TypeString,
 										Computed: true,
 									},
 								},

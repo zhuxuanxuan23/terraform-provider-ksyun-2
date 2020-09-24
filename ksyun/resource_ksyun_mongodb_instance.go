@@ -43,11 +43,11 @@ func resourceKsyunMongodbInstance() *schema.Resource {
 				Required: true,
 			},
 			"node_num": {
-				Type:     schema.TypeInt,
+				Type:     schema.TypeString,
 				Optional: true,
 			},
 			"storage": {
-				Type:     schema.TypeInt,
+				Type:     schema.TypeString,
 				Required: true,
 			},
 			"vpc_id": {
@@ -113,7 +113,7 @@ func resourceKsyunMongodbInstance() *schema.Resource {
 				Computed: true,
 			},
 			"port": {
-				Type:     schema.TypeInt,
+				Type:     schema.TypeString,
 				Computed: true,
 			},
 			"network_type": {
@@ -137,7 +137,7 @@ func resourceKsyunMongodbInstance() *schema.Resource {
 				Computed: true,
 			},
 			"product_what": {
-				Type:     schema.TypeInt,
+				Type:     schema.TypeString,
 				Computed: true,
 			},
 			"create_date": {
@@ -153,11 +153,11 @@ func resourceKsyunMongodbInstance() *schema.Resource {
 				Computed: true,
 			},
 			"mongos_num": {
-				Type:     schema.TypeInt,
+				Type:     schema.TypeString,
 				Computed: true,
 			},
 			"shard_num": {
-				Type:     schema.TypeInt,
+				Type:     schema.TypeString,
 				Computed: true,
 			},
 			"mode": {
@@ -194,7 +194,7 @@ func resourceKsyunMongodbInstance() *schema.Resource {
 							Computed: true,
 						},
 						"port": {
-							Type:     schema.TypeInt,
+							Type:     schema.TypeString,
 							Computed: true,
 						},
 						"status": {

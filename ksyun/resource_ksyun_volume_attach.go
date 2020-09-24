@@ -60,7 +60,7 @@ func resourceKsyunVolumeAttach() *schema.Resource {
 				Computed: true,
 			},
 			"size": {
-				Type:     schema.TypeInt,
+				Type:     schema.TypeString,
 				Computed: true,
 			},
 			"volume_status": {
@@ -68,7 +68,7 @@ func resourceKsyunVolumeAttach() *schema.Resource {
 				Computed: true,
 			},
 			"project_id": {
-				Type:     schema.TypeInt,
+				Type:     schema.TypeString,
 				Computed: true,
 			},
 		},

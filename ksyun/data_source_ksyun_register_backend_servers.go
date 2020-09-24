@@ -30,7 +30,7 @@ func dataSourceKsyunRegisterBackendServers() *schema.Resource {
 				Optional: true,
 			},
 			"total_count": {
-				Type:     schema.TypeInt,
+				Type:     schema.TypeString,
 				Computed: true,
 			},
 			"register_backend_servers": {
@@ -55,7 +55,7 @@ func dataSourceKsyunRegisterBackendServers() *schema.Resource {
 							Computed: true,
 						},
 						"real_server_ip": {
-							Type:     schema.TypeInt,
+							Type:     schema.TypeString,
 							Computed: true,
 						},
 						"real_server_port": {

@@ -118,7 +118,7 @@ func resourceKsyunKrds() *schema.Resource {
 				Required: true,
 			},
 			"duration": {
-				Type:     schema.TypeInt,
+				Type:     schema.TypeString,
 				Required: false,
 				Optional: true,
 			},
@@ -150,7 +150,7 @@ func resourceKsyunKrds() *schema.Resource {
 				Optional: true,
 			},
 			"project_id": {
-				Type:     schema.TypeInt,
+				Type:     schema.TypeString,
 				Required: false,
 				Optional: true,
 			},
@@ -173,7 +173,7 @@ func resourceKsyunKrds() *schema.Resource {
 				Computed: true,
 			},
 			"port": {
-				Type:     schema.TypeInt,
+				Type:     schema.TypeString,
 				Required: false,
 				Optional: true,
 				Computed: true,

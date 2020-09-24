@@ -71,7 +71,7 @@ func resourceKsyunLb() *schema.Resource {
 				Computed: true,
 			},
 			"project_id": {
-				Type:     schema.TypeInt,
+				Type:     schema.TypeString,
 				Optional: true,
 			},
 			"ip_version": {

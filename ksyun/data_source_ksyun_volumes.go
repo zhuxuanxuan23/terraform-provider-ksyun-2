@@ -16,7 +16,7 @@ func dataSourceKsyunVolumes() *schema.Resource {
 				Optional: true,
 			},
 			"total_count": {
-				Type:     schema.TypeInt,
+				Type:     schema.TypeString,
 				Computed: true,
 			},
 			"ids": {
@@ -62,7 +62,7 @@ func dataSourceKsyunVolumes() *schema.Resource {
 							Computed: true,
 						},
 						"size": {
-							Type:     schema.TypeInt,
+							Type:     schema.TypeString,
 							Computed: true,
 						},
 						"volume_status": {
@@ -90,7 +90,7 @@ func dataSourceKsyunVolumes() *schema.Resource {
 							Computed: true,
 						},
 						"project_id": {
-							Type:     schema.TypeInt,
+							Type:     schema.TypeString,
 							Computed: true,
 						},
 					},

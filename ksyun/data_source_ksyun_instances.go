@@ -38,7 +38,7 @@ func dataSourceKsyunInstances() *schema.Resource {
 			},
 
 			"total_count": {
-				Type:     schema.TypeInt,
+				Type:     schema.TypeString,
 				Computed: true,
 			},
 			"subnet_id": {
@@ -138,15 +138,15 @@ func dataSourceKsyunInstances() *schema.Resource {
 							Elem: &schema.Resource{
 								Schema: map[string]*schema.Schema{
 									"v_c_p_u": {
-										Type:     schema.TypeInt,
+										Type:     schema.TypeString,
 										Computed: true,
 									},
 									"g_p_u": {
-										Type:     schema.TypeInt,
+										Type:     schema.TypeString,
 										Computed: true,
 									},
 									"memory_gb": {
-										Type:     schema.TypeInt,
+										Type:     schema.TypeString,
 										Computed: true,
 									},
 									"data_disk_type": {
@@ -154,11 +154,11 @@ func dataSourceKsyunInstances() *schema.Resource {
 										Computed: true,
 									},
 									"data_disk_gb": {
-										Type:     schema.TypeInt,
+										Type:     schema.TypeString,
 										Computed: true,
 									},
 									"root_disk_gb": {
-										Type:     schema.TypeInt,
+										Type:     schema.TypeString,
 										Computed: true,
 									},
 								},
@@ -288,7 +288,7 @@ func dataSourceKsyunInstances() *schema.Resource {
 							},
 						},
 						"project_id": {
-							Type:     schema.TypeInt,
+							Type:     schema.TypeString,
 							Computed: true,
 						},
 						"charge_type": {
@@ -307,14 +307,14 @@ func dataSourceKsyunInstances() *schema.Resource {
 										Computed: true,
 									},
 									"disk_size": {
-										Type:     schema.TypeInt,
+										Type:     schema.TypeString,
 										Computed: true,
 									},
 								},
 							},
 						},
 						"instance_count": {
-							Type:     schema.TypeInt,
+							Type:     schema.TypeString,
 							Computed: true,
 						},
 						"stopped_mode": {
@@ -330,11 +330,11 @@ func dataSourceKsyunInstances() *schema.Resource {
 							Computed: true,
 						},
 						"product_type": {
-							Type:     schema.TypeInt,
+							Type:     schema.TypeString,
 							Computed: true,
 						},
 						"product_what": {
-							Type:     schema.TypeInt,
+							Type:     schema.TypeString,
 							Computed: true,
 						},
 						"auto_scaling_type": {

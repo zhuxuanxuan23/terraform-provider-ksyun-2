@@ -38,7 +38,7 @@ func dataSourceKsyunEips() *schema.Resource {
 			},
 
 			"total_count": {
-				Type:     schema.TypeInt,
+				Type:     schema.TypeString,
 				Computed: true,
 			},
 			"network_interface_id": {
@@ -119,7 +119,7 @@ func dataSourceKsyunEips() *schema.Resource {
 							Computed: true,
 						},
 						"band_width": {
-							Type:     schema.TypeInt,
+							Type:     schema.TypeString,
 							Computed: true,
 						},
 

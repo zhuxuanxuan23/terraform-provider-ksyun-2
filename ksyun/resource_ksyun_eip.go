@@ -26,7 +26,7 @@ func resourceKsyunEip() *schema.Resource {
 				ForceNew: true,
 			},
 			"band_width": {
-				Type:     schema.TypeInt,
+				Type:     schema.TypeString,
 				Required: true,
 			},
 			"charge_type": {
@@ -43,7 +43,7 @@ func resourceKsyunEip() *schema.Resource {
 				}, false),
 			},
 			"purchase_time": {
-				Type:     schema.TypeInt,
+				Type:     schema.TypeString,
 				Required: true,
 			},
 			"project_id": {

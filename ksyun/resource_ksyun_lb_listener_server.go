@@ -32,7 +32,7 @@ func resourceKsyunInstancesWithListener() *schema.Resource {
 				Required: true,
 			},
 			"real_server_port": {
-				Type:     schema.TypeInt,
+				Type:     schema.TypeString,
 				Required: true,
 			},
 			"real_server_type": {
@@ -40,7 +40,7 @@ func resourceKsyunInstancesWithListener() *schema.Resource {
 				Required: true,
 			},
 			"weight": {
-				Type:     schema.TypeInt,
+				Type:     schema.TypeString,
 				Optional: true,
 				Default:  "1",
 			},

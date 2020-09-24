@@ -24,7 +24,7 @@ func dataSourceKsyunSubnetAllocatedIpAddresses() *schema.Resource {
 			},
 
 			"total_count": {
-				Type:     schema.TypeInt,
+				Type:     schema.TypeString,
 				Computed: true,
 			},
 

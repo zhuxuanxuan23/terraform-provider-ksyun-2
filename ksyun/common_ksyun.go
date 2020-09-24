@@ -5,6 +5,7 @@ import (
 	"github.com/hashicorp/terraform-plugin-sdk/helper/schema"
 	"github.com/terraform-providers/terraform-provider-ksyun/logger"
 	"log"
+	"strconv"
 	"strings"
 )
 
@@ -285,7 +286,7 @@ func ConvertFilterStructStructPrefix(v interface{}, req *map[string]interface{},
 func dataSourceKscSave(d *schema.ResourceData, dataKey string, ids []string, datas []map[string]interface{}) error {
 
 	d.SetId(hashStringArray(ids))
-	if err := d.Set("total_count", len(datas)); err != nil {
+	if err := d.Set("total_count", strconv.Itoa(len(datas))); err != nil {
 		return fmt.Errorf("error set datas %v :%v", datas, err)
 	}
 	if err := d.Set(dataKey, datas); err != nil {
@@ -300,7 +301,7 @@ func dataSourceKscSave(d *schema.ResourceData, dataKey string, ids []string, dat
 func dataSourceKscSaveSlice(d *schema.ResourceData, dataKey string, ids []string, datas []string) error {
 
 	d.SetId(hashStringArray(ids))
-	if err := d.Set("total_count", len(datas)); err != nil {
+	if err := d.Set("total_count", strconv.Itoa(len(datas))); err != nil {
 		return fmt.Errorf("error set datas %v :%v", datas, err)
 	}
 
@@ -345,7 +346,7 @@ func dataDbSave(d *schema.ResourceData, dataKey string, ids []string, datas []ma
 		d.SetId(strings.Join(ids, ","))
 	}
 
-	if err := d.Set("total_count", len(datas)); err != nil {
+	if err := d.Set("total_count", strconv.Itoa(len(datas))); err != nil {
 		return err
 	}
 	log.Printf("reset  dataKey: %v datas: %v", dataKey, datas)

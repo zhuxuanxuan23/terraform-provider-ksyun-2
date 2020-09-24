@@ -69,22 +69,22 @@ func resourceKsyunSlbRule() *schema.Resource {
 							Computed: true,
 						},
 						"healthy_threshold": {
-							Type:     schema.TypeInt,
+							Type:     schema.TypeString,
 							Optional: true,
 							Computed: true,
 						},
 						"interval": {
-							Type:     schema.TypeInt,
+							Type:     schema.TypeString,
 							Optional: true,
 							Computed: true,
 						},
 						"timeout": {
-							Type:     schema.TypeInt,
+							Type:     schema.TypeString,
 							Optional: true,
 							Computed: true,
 						},
 						"unhealthy_threshold": {
-							Type:     schema.TypeInt,
+							Type:     schema.TypeString,
 							Optional: true,
 							Computed: true,
 						},
@@ -111,7 +111,7 @@ func resourceKsyunSlbRule() *schema.Resource {
 				Elem: &schema.Resource{
 					Schema: map[string]*schema.Schema{
 						"session_persistence_period": {
-							Type:     schema.TypeInt,
+							Type:     schema.TypeString,
 							Computed: true,
 							Optional: true,
 						},

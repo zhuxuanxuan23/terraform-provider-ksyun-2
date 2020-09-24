@@ -49,7 +49,7 @@ func resourceKsyunLoadBalancerAcl() *schema.Resource {
 							Computed: true,
 						},
 						"rule_number": {
-							Type:     schema.TypeInt,
+							Type:     schema.TypeString,
 							Computed: true,
 						},
 						"rule_action": {

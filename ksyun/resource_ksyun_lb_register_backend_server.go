@@ -42,7 +42,7 @@ func resourceKsyunRegisterBackendServer() *schema.Resource {
 				Computed: true,
 			},
 			"real_server_ip": {
-				Type:     schema.TypeInt,
+				Type:     schema.TypeString,
 				Computed: true,
 			},
 			"real_server_port": {

@@ -22,7 +22,7 @@ func dataSourceKsyunListenerHostHeaders() *schema.Resource {
 				Optional: true,
 			},
 			"total_count": {
-				Type:     schema.TypeInt,
+				Type:     schema.TypeString,
 				Computed: true,
 			},
 			"listener_id": {
