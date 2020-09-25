@@ -7,6 +7,7 @@ import (
 	"github.com/hashicorp/terraform-plugin-sdk/helper/resource"
 	"github.com/hashicorp/terraform-plugin-sdk/helper/schema"
 	"github.com/terraform-providers/terraform-provider-ksyun/logger"
+	"strconv"
 	"strings"
 	"time"
 )
@@ -402,6 +403,9 @@ func resourceMongodbShardInstanceRead(d *schema.ResourceData, meta interface{}) 
 	}
 
 	for k, v := range result {
+		if vv, ok := v.(float64); ok {
+			v = strconv.FormatFloat(vv, 'f', -1, 64)
+		}
 		if err := d.Set(k, v); err != nil {
 			return fmt.Errorf("error set data %v :%v", v, err)
 		}

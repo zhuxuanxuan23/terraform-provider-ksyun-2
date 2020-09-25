@@ -5,6 +5,7 @@ import (
 	"github.com/hashicorp/terraform-plugin-sdk/helper/resource"
 	"github.com/hashicorp/terraform-plugin-sdk/helper/schema"
 	"github.com/terraform-providers/terraform-provider-ksyun/logger"
+	"strconv"
 	"strings"
 	"time"
 )
@@ -88,6 +89,9 @@ func resourceKsyunLoadBalancerAclEntryRead(d *schema.ResourceData, m interface{}
 		}
 		if aclEntryItem["LoadBalancerAclEntryId"] == ids[1] {
 			for key, value := range aclEntryItem {
+				if valuev, ok := value.(float64); ok {
+					value = strconv.FormatFloat(valuev, 'f', -1, 64)
+				}
 				if err := d.Set(Hump2Downline(key), value); err != nil {
 					return err
 				}
