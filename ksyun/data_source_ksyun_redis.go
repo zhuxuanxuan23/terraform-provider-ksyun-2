@@ -198,7 +198,7 @@ func dataSourceRedisInstances() *schema.Resource {
 							Elem: &schema.Resource{
 								Schema: map[string]*schema.Schema{
 									"security_rule_id": {
-										Type:     schema.TypeFloat,
+										Type:     schema.TypeString,
 										Computed: true,
 									},
 									"cidr": {

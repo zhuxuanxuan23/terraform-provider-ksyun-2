@@ -33,7 +33,7 @@ func resourceKsyunRegisterBackendServer() *schema.Resource {
 				Required: true,
 			},
 			"weight": {
-				Type:     schema.TypeFloat,
+				Type:     schema.TypeString,
 				Optional: true,
 				Computed: true,
 			},

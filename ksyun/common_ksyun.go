@@ -21,6 +21,9 @@ func GetSubDByRep(data interface{}, include, exclude map[string]bool) []interfac
 		if exclude[k] || !include[k] {
 			continue
 		}
+		if vv, ok := v.(float64); ok {
+			v = strconv.FormatFloat(vv, 'f', -1, 64)
+		}
 		subD[Hump2Downline(k)] = v
 	}
 	return []interface{}{subD}
@@ -40,6 +43,9 @@ func GetSubSliceDByRep(items []interface{}, include /*,exclude*/ map[string]bool
 			//ignore keys whose type is not basic type,and need to deal later.
 			if /*exclude[key]||*/ !include[key] {
 				continue //if not judge,sdk may set value to terraform which can identify,and will panic.
+			}
+			if valuev, ok := value.(float64); ok {
+				value = strconv.FormatFloat(valuev, 'f', -1, 64)
 			}
 			data[Hump2Downline(key)] = value
 		}
@@ -61,6 +67,9 @@ func GetSubStructDByRep(datas interface{}, exclude map[string]bool) map[string]i
 	for k, v := range items {
 		if exclude[k] {
 			continue
+		}
+		if vv, ok := v.(float64); ok {
+			v = strconv.FormatFloat(vv, 'f', -1, 64)
 		}
 		subStruct[Hump2Downline(k)] = v
 	}
@@ -85,6 +94,9 @@ func SetDByRespV1(d *schema.ResourceData, m interface{}, exclud map[string]bool)
 				mre[k] = v
 			}
 			continue
+		}
+		if vv, ok := v.(float64); ok {
+			v = strconv.FormatFloat(vv, 'f', -1, 64)
 		}
 		err := d.Set(Hump2Downline(k), v)
 		if err != nil {
@@ -116,7 +128,9 @@ func SetDByResp(d *schema.ResourceData, m interface{}, includ, exclude map[strin
 			}
 			continue
 		}
-
+		if vv, ok := v.(float64); ok {
+			v = strconv.FormatFloat(vv, 'f', -1, 64)
+		}
 		err := d.Set(Hump2Downline(k), v)
 		if err != nil {
 			log.Println(err.Error())
@@ -378,7 +392,9 @@ func SetDByFkResp(d *schema.ResourceData, m interface{}, include map[string]bool
 			}
 			continue
 		}
-
+		if vv, ok := v.(float64); ok {
+			v = strconv.FormatFloat(vv, 'f', -1, 64)
+		}
 		err := d.Set(k, v)
 		if err != nil {
 			log.Println(err.Error())

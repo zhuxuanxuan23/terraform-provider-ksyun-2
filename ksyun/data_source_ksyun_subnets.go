@@ -5,6 +5,7 @@ import (
 	"github.com/hashicorp/terraform-plugin-sdk/helper/schema"
 	"github.com/hashicorp/terraform-plugin-sdk/helper/validation"
 	"regexp"
+	"strconv"
 )
 
 func dataSourceKsyunSubnets() *schema.Resource {
@@ -233,7 +234,7 @@ func dataSourceKsyunSubnetsSave(d *schema.ResourceData, result []map[string]inte
 		})
 	}
 	d.SetId(hashStringArray(ids))
-	err = d.Set("total_count", len(result))
+	err = d.Set("total_count", strconv.Itoa(len(result)))
 	if err != nil {
 		return err
 	}

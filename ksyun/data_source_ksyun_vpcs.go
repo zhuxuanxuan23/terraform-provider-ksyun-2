@@ -6,6 +6,7 @@ import (
 	"github.com/hashicorp/terraform-plugin-sdk/helper/schema"
 	"github.com/hashicorp/terraform-plugin-sdk/helper/validation"
 	"regexp"
+	"strconv"
 )
 
 func dataSourceKsyunVPCs() *schema.Resource {
@@ -125,7 +126,7 @@ func dataSourceKsyunVPCsSave(d *schema.ResourceData, result []map[string]interfa
 		})
 	}
 	d.SetId(hashStringArray(ids))
-	err = d.Set("total_count", len(result))
+	err = d.Set("total_count", strconv.Itoa(len(result)))
 	if err != nil {
 		return err
 	}

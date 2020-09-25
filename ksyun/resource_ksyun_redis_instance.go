@@ -170,7 +170,7 @@ func resourceRedisInstance() *schema.Resource {
 				Computed: true,
 			},
 			"used_memory": {
-				Type:     schema.TypeFloat,
+				Type:     schema.TypeString,
 				Computed: true,
 			},
 			"sub_order_id": {

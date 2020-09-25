@@ -47,7 +47,7 @@ func dataSourceKsyunRegisterBackendServers() *schema.Resource {
 							Computed: true,
 						},
 						"weight": {
-							Type:     schema.TypeFloat,
+							Type:     schema.TypeString,
 							Computed: true,
 						},
 						"register_id": {

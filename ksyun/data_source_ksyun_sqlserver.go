@@ -284,7 +284,7 @@ func dataSourceKsyunSqlServer() *schema.Resource {
 							Computed: true,
 						},
 						"disk_used": {
-							Type:     schema.TypeFloat,
+							Type:     schema.TypeString,
 							Optional: true,
 							Computed: true,
 						},
